@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font awosome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- bootstrap 5-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"
+        integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <link rel="stylesheet" href="style.css">
+    <title>account</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+
+<body id="body">
+
+    <div class="container">
+        <h2 id="title"> MY <i class="fa-sharp fa-solid fa-chart-pie text-danger"></i>
+            ACCOUNT</h2>
+        <p class="description">Managing expenses and income in your life is a significant part of ongoing management.
+            Proper management of
+            expenses and
+            income requires budgeting, setting and managing goals and objectives. However, planning alone is not enough.
+            continuous
+            monitoring of actual execution is also necessary as part of ongoing business tracking.</p>
+
+        <div class="alert alert-secondary text-center bg-succes" role="alert" id="balance">
+            balance:
+        </div>
+
+
+        <div class="row">
+
+            <div class="col-md-4" id="formDiv">
+                <h3 class="table-title">Fill Out Fields:</h3>
+                <select class="form-select" aria-label="Default select example" id="type" style="font-size: 20px;">
+                    <option value="income">Income</option>
+                    <option value="expense">Expense</option>
+                    <option value="saving">Saving</option>
+                </select>
+
+
+                <label style="padding-top:15px;font-size: 20px;">Way Of Payment:</label>
+                <select class="form-select" aria-label="Default select example" id="payment" style="font-size: 20px;">
+                    <option value="Direct">Direct</option>
+                    <option value="Credit">Credit</option>
+                    <option value="Card">Card</option>
+                    <option value="Transfer">Transfer</option>
+                </select>
+
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control mt-3" id="description" placeholder="Description" />
+                    <label for="description">Description</label>
+                </div>
+                <div class="form-floating">
+                    <input type="number" class="form-control" id="amount" placeholder="Amount" />
+                    <label for="amount">Amount</label>
+                </div>
+                <button class="btn btn-primary w-100 mt-3" onclick="addNewAction()">Add</button>
+            </div>
+
+
+            <div class="col-md-8">
+                <div class="table-title">Your incomes & Expenses</div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th> type</th>
+                            <th>Description </th>
+                            <th>Amount </th>
+                            <th>payment </th>
+                            <th>edit </th>
+                            <th> delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="actions"></tbody>
+                </table>
+
+
+
+                <div class="table-title ">Build Your Saving Plan</div>
+                <table class="table table2 ">
+                    <thead>
+                        <tr >
+                            <th> type</th>
+                            <th>Description </th>
+                            <th>Amount </th>
+                            <th>payment </th>
+
+                            <th> delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="saving"></tbody>
+                </table>
+            </div>
+
+
+        </div>
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+    <script src="scripts.js" type="module"></script>
+</body>
+
+</html>
